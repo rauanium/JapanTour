@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1312D12603B11D001E9358 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1312CF2603B11D001E9358 /* CategoriesCollectionViewCell.swift */; };
+		4D1312D22603B11D001E9358 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1312D02603B11D001E9358 /* CategoriesCollectionViewCell.xib */; };
 		4D4513EB2601045B0086DBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4513EA2601045B0086DBD9 /* AppDelegate.swift */; };
 		4D4513ED2601045B0086DBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4513EC2601045B0086DBD9 /* SceneDelegate.swift */; };
 		4D4513EF2601045B0086DBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4513EE2601045B0086DBD9 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1312CF2603B11D001E9358 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D1312D02603B11D001E9358 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		4D4513E72601045B0086DBD9 /* JapanTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapanTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4513EA2601045B0086DBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D4513EC2601045B0086DBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1312CE2603B0F8001E9358 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D1312CF2603B11D001E9358 /* CategoriesCollectionViewCell.swift */,
+				4D1312D02603B11D001E9358 /* CategoriesCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4D4513DE2601045A0086DBD9 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		4D4513E92601045B0086DBD9 /* JapanTour */ = {
 			isa = PBXGroup;
 			children = (
+				4D1312CE2603B0F8001E9358 /* View */,
 				4D4513EA2601045B0086DBD9 /* AppDelegate.swift */,
 				4D4513EC2601045B0086DBD9 /* SceneDelegate.swift */,
 				4D4513EE2601045B0086DBD9 /* ViewController.swift */,
@@ -234,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1312D22603B11D001E9358 /* CategoriesCollectionViewCell.xib in Resources */,
 				4D4513FA260104620086DBD9 /* LaunchScreen.storyboard in Resources */,
 				4D4513F7260104620086DBD9 /* Assets.xcassets in Resources */,
 				4D4513F22601045B0086DBD9 /* Main.storyboard in Resources */,
@@ -265,6 +280,7 @@
 				4D4513EB2601045B0086DBD9 /* AppDelegate.swift in Sources */,
 				4D4513F52601045B0086DBD9 /* JapanTour.xcdatamodeld in Sources */,
 				4D4513ED2601045B0086DBD9 /* SceneDelegate.swift in Sources */,
+				4D1312D12603B11D001E9358 /* CategoriesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
