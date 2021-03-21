@@ -16,13 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FAg-Nm-2oI">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sjo-Af-anA">
                                 <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="IKi-2B-AQG"/>
+                                    <constraint firstAttribute="width" constant="374" id="LJz-9p-yGw"/>
+                                    <constraint firstAttribute="height" constant="60" id="RO4-LF-bhS"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Im-Un-Uxg">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7jM-h9-jEk">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,19 +31,24 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7SE-kL-FgC">
+                                <rect key="frame" x="20" y="112" width="374" height="701"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FAg-Nm-2oI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4DU-RQ-H1V"/>
-                            <constraint firstItem="FAg-Nm-2oI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PEy-YT-9Zy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FAg-Nm-2oI" secondAttribute="trailing" constant="20" id="Xou-Ko-LNT"/>
-                            <constraint firstItem="FAg-Nm-2oI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjS-Zf-1Pj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sjo-Af-anA" secondAttribute="trailing" constant="20" id="MaX-7E-zqU"/>
+                            <constraint firstItem="sjo-Af-anA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b4z-Ne-rfg"/>
+                            <constraint firstItem="sjo-Af-anA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eJO-Aq-Kfa"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="BNb-2a-nYd"/>
                     <connections>
-                        <outlet property="categories" destination="FAg-Nm-2oI" id="8kL-x9-5Y1"/>
+                        <outlet property="categoriesCV" destination="sjo-Af-anA" id="Ilq-Zc-exj"/>
+                        <outlet property="dataTableView" destination="7SE-kL-FgC" id="Xtq-OZ-PQR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,8 +62,34 @@
                     <view key="view" contentMode="scaleToFill" id="xmM-b1-qgm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5g-72-glI">
+                                <rect key="frame" x="190" y="437.5" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-FC-Sl3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="Og7-pc-ja4"/>
+                                    <tabBarItem title="Food" id="h2W-ah-zNo">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tabBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Zco-Ge-7s5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bm9-FC-Sl3" firstAttribute="top" secondItem="Zco-Ge-7s5" secondAttribute="top" id="36i-mx-vy5"/>
+                            <constraint firstItem="z5g-72-glI" firstAttribute="centerY" secondItem="xmM-b1-qgm" secondAttribute="centerY" id="3jq-9I-AF6"/>
+                            <constraint firstItem="Bm9-FC-Sl3" firstAttribute="trailing" secondItem="Zco-Ge-7s5" secondAttribute="trailing" id="8uC-ra-jFt"/>
+                            <constraint firstItem="z5g-72-glI" firstAttribute="centerX" secondItem="xmM-b1-qgm" secondAttribute="centerX" id="a3s-NQ-ucp"/>
+                            <constraint firstItem="Bm9-FC-Sl3" firstAttribute="leading" secondItem="Zco-Ge-7s5" secondAttribute="leading" id="b5u-MR-Ekb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="map.fill" catalog="system" id="4za-uB-Kkl"/>
                 </viewController>
@@ -68,16 +100,28 @@
         <!--View Controller-->
         <scene sceneID="sgC-ja-0l7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mid-Av-0AL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="qnn-Ft-7Mp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jjm-c7-WaG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-NA-UZX">
+                                <rect key="frame" x="181" y="437.5" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="shD-PB-Chv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W8z-NA-UZX" firstAttribute="centerY" secondItem="Jjm-c7-WaG" secondAttribute="centerY" id="Vk9-46-5j5"/>
+                            <constraint firstItem="W8z-NA-UZX" firstAttribute="centerX" secondItem="Jjm-c7-WaG" secondAttribute="centerX" id="t2k-9C-BhT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="p1c-3p-6sS"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mid-Av-0AL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="712" y="767"/>
         </scene>
@@ -88,8 +132,20 @@
                     <view key="view" contentMode="scaleToFill" id="ldW-BA-BUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-x9-S4F">
+                                <rect key="frame" x="183" y="437.5" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dv7-1h-GAi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F9e-x9-S4F" firstAttribute="centerY" secondItem="ldW-BA-BUK" secondAttribute="centerY" id="SPO-PB-tGk"/>
+                            <constraint firstItem="F9e-x9-S4F" firstAttribute="centerX" secondItem="ldW-BA-BUK" secondAttribute="centerX" id="XBc-SR-PBn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="dSd-ky-QJj"/>
                 </viewController>

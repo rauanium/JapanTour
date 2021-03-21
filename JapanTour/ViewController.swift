@@ -8,36 +8,63 @@
 import UIKit
 
 
-var categoriesData = ["🌳 Nature", "🍜 Food", "⛩ Culture"]
+var categoriesData = ["🔥 Popular","🌳 Nature", "🍜 Food", "⛩ Culture"]
 
 class ViewController: UIViewController {
-
+   
     
+    @IBOutlet weak var dataTableView: UITableView!
+    
+    @IBOutlet weak var categoriesCV: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoriesCV.delegate = self
+        categoriesCV.dataSource = self
+        
+        dataTableView.delegate = self
+        dataTableView.dataSource = self
         
         
-        categories.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
-        categories.delegate = self
-        categories.dataSource = self
-    }
-    @IBOutlet weak var categories: UICollectionView!
-    
-
+        categoriesCV.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
+        
+        dataTableView.register(UINib(nibName: "PlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "PlacesTableViewCell")
+        
 }
-
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
+    
+    
+    
+    
+}
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesData.count
+        categoriesData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = categories.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
+        let cell = categoriesCV.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
+        
         cell.categoryLabel.text = categoriesData[indexPath.row]
-        print(categoriesData[indexPath.row])
+        
         return cell
     }
+}
+
+
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        categoriesData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = dataTableView.dequeueReusableCell(withIdentifier: "PlacesTableViewCell", for: indexPath) as! PlacesTableViewCell
+        
+        
+        return cell
+    }
+    
     
 }

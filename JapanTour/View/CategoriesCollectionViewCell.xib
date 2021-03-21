@@ -11,18 +11,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCollectionViewCell" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="JapanTour" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJA-0T-adZ">
-                        <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🌳Nature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4O-qT-84L">
-                                <rect key="frame" x="8" y="15" width="98" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌳Nature" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4O-qT-84L">
+                                <rect key="frame" x="10" y="15" width="110" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WiW-kc-TVe"/>
+                                    <constraint firstAttribute="width" constant="110" id="wF4-w7-VQh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,24 +34,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="CategoriesCollectionViewCell"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="110" id="Coq-dc-Ex9"/>
-                            <constraint firstAttribute="height" constant="50" id="JPV-bA-eGZ"/>
+                            <constraint firstAttribute="bottom" secondItem="D4O-qT-84L" secondAttribute="bottom" constant="14" id="D6J-4e-LHq"/>
+                            <constraint firstAttribute="height" constant="50" id="M1f-8K-lCE"/>
+                            <constraint firstItem="D4O-qT-84L" firstAttribute="leading" secondItem="fJA-0T-adZ" secondAttribute="leading" constant="10" id="USD-Rb-Itv"/>
+                            <constraint firstItem="D4O-qT-84L" firstAttribute="top" secondItem="fJA-0T-adZ" secondAttribute="top" constant="15" id="qAg-Y8-slo"/>
+                            <constraint firstAttribute="width" constant="130" id="rBo-BG-kCH"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="fJA-0T-adZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="59D-E3-4AZ"/>
-                <constraint firstItem="fJA-0T-adZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8SH-Sk-Rys"/>
-                <constraint firstAttribute="bottom" secondItem="fJA-0T-adZ" secondAttribute="bottom" id="IXb-pz-y6P"/>
-                <constraint firstAttribute="trailing" secondItem="fJA-0T-adZ" secondAttribute="trailing" id="tbe-kZ-M55"/>
+                <constraint firstAttribute="bottom" secondItem="fJA-0T-adZ" secondAttribute="bottom" id="NBe-Oi-r6B"/>
+                <constraint firstAttribute="trailing" secondItem="fJA-0T-adZ" secondAttribute="trailing" id="aia-xj-GTy"/>
+                <constraint firstItem="fJA-0T-adZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tDf-Wy-icm"/>
+                <constraint firstItem="fJA-0T-adZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="y6w-ln-YjQ"/>
             </constraints>
-            <size key="customSize" width="110" height="50"/>
+            <size key="customSize" width="130" height="50"/>
             <connections>
                 <outlet property="categoryLabel" destination="D4O-qT-84L" id="yAP-yQ-Ims"/>
             </connections>
-            <point key="canvasLocation" x="181.15942028985509" y="138.61607142857142"/>
+            <point key="canvasLocation" x="195.6521739130435" y="138.61607142857142"/>
         </collectionViewCell>
     </objects>
     <resources>

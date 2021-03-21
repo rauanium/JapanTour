@@ -18,6 +18,8 @@
 		4D4513FA260104620086DBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4513F8260104620086DBD9 /* LaunchScreen.storyboard */; };
 		4D451405260104630086DBD9 /* JapanTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D451404260104630086DBD9 /* JapanTourTests.swift */; };
 		4D451410260104640086DBD9 /* JapanTourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45140F260104640086DBD9 /* JapanTourUITests.swift */; };
+		4D966FE42607248B0007F47F /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966FE22607248B0007F47F /* PlacesTableViewCell.swift */; };
+		4D966FE52607248C0007F47F /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D966FE32607248B0007F47F /* PlacesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		4D45140B260104640086DBD9 /* JapanTourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapanTourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45140F260104640086DBD9 /* JapanTourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanTourUITests.swift; sourceTree = "<group>"; };
 		4D451411260104640086DBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D966FE22607248B0007F47F /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		4D966FE32607248B0007F47F /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			children = (
 				4D1312CF2603B11D001E9358 /* CategoriesCollectionViewCell.swift */,
 				4D1312D02603B11D001E9358 /* CategoriesCollectionViewCell.xib */,
+				4D966FE22607248B0007F47F /* PlacesTableViewCell.swift */,
+				4D966FE32607248B0007F47F /* PlacesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 				4D4513FA260104620086DBD9 /* LaunchScreen.storyboard in Resources */,
 				4D4513F7260104620086DBD9 /* Assets.xcassets in Resources */,
 				4D4513F22601045B0086DBD9 /* Main.storyboard in Resources */,
+				4D966FE52607248C0007F47F /* PlacesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +288,7 @@
 				4D4513F52601045B0086DBD9 /* JapanTour.xcdatamodeld in Sources */,
 				4D4513ED2601045B0086DBD9 /* SceneDelegate.swift in Sources */,
 				4D1312D12603B11D001E9358 /* CategoriesCollectionViewCell.swift in Sources */,
+				4D966FE42607248B0007F47F /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
