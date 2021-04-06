@@ -52,7 +52,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 }
 
 //tableview
-
+//tableview
 //tableview
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
