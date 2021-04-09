@@ -20,4 +20,11 @@ class RoundedImage: UIImageView{
         }
     }
     
+    
+
+    
+    
+    
+    
+    
 }

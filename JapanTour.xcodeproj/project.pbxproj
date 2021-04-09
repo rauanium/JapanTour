@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D1312D12603B11D001E9358 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1312CF2603B11D001E9358 /* CategoriesCollectionViewCell.swift */; };
 		4D1312D22603B11D001E9358 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1312D02603B11D001E9358 /* CategoriesCollectionViewCell.xib */; };
+		4D2A6B3E261F573E00095624 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A6B3D261F573E00095624 /* ProfileViewController.swift */; };
+		4D2A6B43261F5A4E00095624 /* GradientClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A6B42261F5A4E00095624 /* GradientClass.swift */; };
 		4D4513EB2601045B0086DBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4513EA2601045B0086DBD9 /* AppDelegate.swift */; };
 		4D4513ED2601045B0086DBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4513EC2601045B0086DBD9 /* SceneDelegate.swift */; };
 		4D4513EF2601045B0086DBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4513EE2601045B0086DBD9 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		4D1312CF2603B11D001E9358 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1312D02603B11D001E9358 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		4D2A6B3D261F573E00095624 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4D2A6B42261F5A4E00095624 /* GradientClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientClass.swift; sourceTree = "<group>"; };
 		4D4513E72601045B0086DBD9 /* JapanTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapanTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4513EA2601045B0086DBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D4513EC2601045B0086DBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				4D966FE22607248B0007F47F /* PlacesTableViewCell.swift */,
 				4D966FE32607248B0007F47F /* PlacesTableViewCell.xib */,
 				4D7B26C9261CAFD800C1FA40 /* RoundedImage.swift */,
+				4D2A6B42261F5A4E00095624 /* GradientClass.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				4D4513F8260104620086DBD9 /* LaunchScreen.storyboard */,
 				4D4513FB260104620086DBD9 /* Info.plist */,
 				4D4513F32601045B0086DBD9 /* JapanTour.xcdatamodeld */,
+				4D2A6B3D261F573E00095624 /* ProfileViewController.swift */,
 			);
 			path = JapanTour;
 			sourceTree = "<group>";
@@ -288,10 +294,12 @@
 			files = (
 				4D4513EF2601045B0086DBD9 /* ViewController.swift in Sources */,
 				4D4513EB2601045B0086DBD9 /* AppDelegate.swift in Sources */,
+				4D2A6B43261F5A4E00095624 /* GradientClass.swift in Sources */,
 				4D7B26CA261CAFD800C1FA40 /* RoundedImage.swift in Sources */,
 				4D4513F52601045B0086DBD9 /* JapanTour.xcdatamodeld in Sources */,
 				4D4513ED2601045B0086DBD9 /* SceneDelegate.swift in Sources */,
 				4D1312D12603B11D001E9358 /* CategoriesCollectionViewCell.swift in Sources */,
+				4D2A6B3E261F573E00095624 /* ProfileViewController.swift in Sources */,
 				4D966FE42607248B0007F47F /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
