@@ -37,6 +37,9 @@ class ViewController: UIViewController {
     
     
 }
+//collection view
+
+
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         categoriesData.count
@@ -49,6 +52,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         
         return cell
     }
+    
+    
 }
 
 //tableview
