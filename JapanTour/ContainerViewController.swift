@@ -7,43 +7,89 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+   
+    
 
-    let firstVC = FirstViewController()
-    let secondVC = SecondViewController()
+    var categoriesData = ["🔥 Popular","🌳 Nature", "🍜 Food", "⛩ Culture"]
+    @IBOutlet weak var collectionViewAsNav: UICollectionView!
     
-    var realFVC: FirstViewController?
-    var realSVC: SecondViewController?
-    
+    @IBOutlet weak var firstContainer: UIView!
+    @IBOutlet weak var secondContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewAsNav.delegate = self
+        collectionViewAsNav.dataSource = self
+
+        collectionViewAsNav.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
         
-//        secondVC.view.isHidden = true
-        
-        
-        
+        secondContainer.isHidden = true
     }
    
     
-    @IBAction func switcher(_ sender: UISegmentedControl) {
-//        firstVC.view.isHidden = true
-//        secondVC.view.isHidden = true
-        
-        if sender.selectedSegmentIndex == 0{
-            realSVC?.view.isHidden = true
-            realFVC?.view.isHidden = false
-            
+//    @IBAction func switcher(_ sender: UISegmentedControl) {
 //
-//            firstVC.view.isHidden = false
-            print("first switcher")
-        }else{
-            realSVC?.view.isHidden = false
-            realFVC?.view.isHidden = true
+//
+//        firstContainer.isHidden = true
+//        secondContainer.isHidden = true
+//        if sender.selectedSegmentIndex == 0{
+//            firstContainer.isHidden = false
+//
+//
+//            print("first switcher")
+//        }else{
+//            secondContainer.isHidden = false
+//
+//
+//            print("second switcher")
+//        }
+//    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        categoriesData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionViewAsNav.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
+        
+        cell.categoryLabel.text = categoriesData[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        firstContainer.isHidden = true
+        secondContainer.isHidden = true
+        
+        if (indexPath.row == 0){
+            print(indexPath.row)
+            firstContainer.isHidden = false
+        }
+        else if(indexPath.row == 1){
+            secondContainer.isHidden = false
+            print(indexPath.row)
             
-//            secondVC.view.isHidden = false
-            print("second switcher")
+        }
+        
+        else if(indexPath.row == 2){
+            firstContainer.isHidden = false
+            print(indexPath.row)
+            
+        }
+        else if(indexPath.row == 3){
+            print(indexPath.row)
+            secondContainer.isHidden = false
         }
     }
+    
+    
+    
+    
+    
     
     
     
