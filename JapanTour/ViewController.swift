@@ -12,8 +12,13 @@ var categoriesData = ["🔥 Popular","🌳 Nature", "🍜 Food", "⛩ Culture"]
 
 class ViewController: UIViewController {
    
+    @IBOutlet weak var popularVC: UIView!
+    @IBOutlet weak var natureVC: UIView!
+    @IBOutlet weak var foodVC: UIView!
+    @IBOutlet weak var cultureVC: UIView!
     
-    @IBOutlet weak var dataTableView: UITableView!
+    
+    
     
     @IBOutlet weak var categoriesCV: UICollectionView!
     
@@ -22,13 +27,12 @@ class ViewController: UIViewController {
         categoriesCV.delegate = self
         categoriesCV.dataSource = self
         
-        dataTableView.delegate = self
-        dataTableView.dataSource = self
         
         
         categoriesCV.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
-        
-        dataTableView.register(UINib(nibName: "PlacesTableViewCell", bundle: nil), forCellReuseIdentifier: "PlacesTableViewCell")
+        natureVC.isHidden = true
+        foodVC.isHidden = true
+        cultureVC.isHidden = true
         
 }
     
@@ -53,23 +57,38 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        natureVC.isHidden = true
+        foodVC.isHidden = true
+        cultureVC.isHidden = true
+        popularVC.isHidden = true
+        if (indexPath.row == 0){
+            print(indexPath.row)
+            popularVC.isHidden = false
+        }
+        else if(indexPath.row == 1){
+            natureVC.isHidden = false
+            print(indexPath.row)
+            
+        }
+        
+        else if(indexPath.row == 2){
+            foodVC.isHidden = false
+            print(indexPath.row)
+            
+        }
+        else if(indexPath.row == 3){
+            print(indexPath.row)
+            cultureVC.isHidden = false
+        }
+    }
+    
+    
+    
     
 }
 
 //tableview
 //tableview
 //tableview
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        categoriesData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = dataTableView.dequeueReusableCell(withIdentifier: "PlacesTableViewCell", for: indexPath) as! PlacesTableViewCell
-        
-        
-        return cell
-    }
-    
-    
-}
+
