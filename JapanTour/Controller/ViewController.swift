@@ -16,24 +16,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var natureVC: UIView!
     @IBOutlet weak var foodVC: UIView!
     @IBOutlet weak var cultureVC: UIView!
-    
-    
-    
-    
     @IBOutlet weak var categoriesCV: UICollectionView!
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         categoriesCV.delegate = self
         categoriesCV.dataSource = self
-        
-        
-        
         categoriesCV.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
         natureVC.isHidden = true
         foodVC.isHidden = true
         cultureVC.isHidden = true
         
+        
+        
+        
 }
     
     
@@ -41,10 +47,13 @@ class ViewController: UIViewController {
     
     
 }
-//collection view
+
+
+//MARK: - Collection View
 
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         categoriesData.count
     }
@@ -53,10 +62,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let cell = categoriesCV.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
         
         cell.categoryLabel.text = categoriesData[indexPath.row]
-        
         return cell
     }
     
+    
+    // Categories visibility
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         natureVC.isHidden = true
         foodVC.isHidden = true
@@ -88,7 +98,4 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
 }
 
-//tableview
-//tableview
-//tableview
 

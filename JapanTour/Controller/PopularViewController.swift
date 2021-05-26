@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class PopularViewController: UIViewController {
     @IBOutlet weak var dataTableView: UITableView!
     override func viewDidLoad() {
@@ -25,7 +26,10 @@ class PopularViewController: UIViewController {
     
 
 }
+
+//MARK: - TableView
 extension PopularViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categoriesData.count
     }

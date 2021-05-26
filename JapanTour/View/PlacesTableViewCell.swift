@@ -11,6 +11,7 @@ class PlacesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var blackGradient: UIView!
     @IBOutlet weak var placeImage: RoundedImage!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +23,10 @@ class PlacesTableViewCell: UITableViewCell {
         gradientLayer.colors = [initialColor.cgColor, finalColor.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 2.0)
         gradientLayer.endPoint = CGPoint(x: 0.6, y: 0.6)
+        blackGradient.layer.cornerRadius = 10
+        blackGradient.clipsToBounds = true
         blackGradient.layer.addSublayer(gradientLayer)
+        
         
         
         
