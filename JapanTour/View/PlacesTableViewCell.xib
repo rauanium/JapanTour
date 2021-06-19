@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dc-Mz-N4v">
                         <rect key="frame" x="0.0" y="0.0" width="349" height="210"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="z7q-kN-Hn6" customClass="RoundedImage" customModule="JapanTour" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteSimpleImage" translatesAutoresizingMaskIntoConstraints="NO" id="z7q-kN-Hn6" customClass="RoundedImage" customModule="JapanTour" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="349" height="200"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -125,12 +125,12 @@
     </objects>
     <designables>
         <designable name="z7q-kN-Hn6">
-            <size key="intrinsicContentSize" width="3024" height="4032"/>
+            <size key="intrinsicContentSize" width="5184" height="3456"/>
         </designable>
     </designables>
     <resources>
-        <image name="sampleImage" width="3024" height="4032"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="whiteSimpleImage" width="5184" height="3456"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
