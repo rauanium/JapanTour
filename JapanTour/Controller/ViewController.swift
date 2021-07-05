@@ -8,15 +8,15 @@
 import UIKit
 
 
-var categoriesData = ["🔥 Popular","🌳 Nature", "🍜 Food", "⛩ Culture"]
+
 
 class ViewController: UIViewController {
-    var selectedIndex = 0
-    var indexPaths = [IndexPath]()
+    
     @IBOutlet weak var popularVC: UIView!
     @IBOutlet weak var natureVC: UIView!
     @IBOutlet weak var foodVC: UIView!
     @IBOutlet weak var cultureVC: UIView!
+    
     @IBOutlet weak var categorySwitcher: UISegmentedControl!
     
     
