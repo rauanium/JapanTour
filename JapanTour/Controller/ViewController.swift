@@ -17,17 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var natureVC: UIView!
     @IBOutlet weak var foodVC: UIView!
     @IBOutlet weak var cultureVC: UIView!
-    @IBOutlet weak var categoriesCV: UICollectionView!
-    var selectedLabel = CategoriesCollectionViewCell()
+    @IBOutlet weak var categorySwitcher: UISegmentedControl!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        categoriesCV.delegate = self
-        categoriesCV.dataSource = self
-        categoriesCV.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
         
         natureVC.isHidden = true
         foodVC.isHidden = true
@@ -37,87 +33,36 @@ class ViewController: UIViewController {
         
        
 }
-    
-}
-
-
-//MARK: - Collection View
-
-
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        categoriesData.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = categoriesCV.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
-        
-        
-        
-        
-        cell.categoryLabel.text = categoriesData[indexPath.row]
-        
-        if (selectedIndex == indexPath.row){
-            cell.categoryLabel.backgroundColor = UIColor.yellow
-        }else{
-            cell.categoryLabel.backgroundColor = UIColor.black
-        }
-        
-        return cell
-    }
-    
-    
-    
-    
-    
-    
-    
-    // Categories visibility
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        selectedIndex = indexPath.row
-        
-        
-        
-        
-        
-        
-        
-//        categoriesCV.reloadItems(at: indexPaths)
-//        collectionView.reloadData()
-        
-        
-        
+    @IBAction func categoryChanged(_ sender: UISegmentedControl) {
         natureVC.isHidden = true
         foodVC.isHidden = true
         cultureVC.isHidden = true
         popularVC.isHidden = true
-        if (indexPath.row == 0){
-            print(indexPath.row)
+        
+        
+        if sender.selectedSegmentIndex == 0 {
+            print("Popular")
             popularVC.isHidden = false
             
         }
-        else if(indexPath.row == 1){
+        else if sender.selectedSegmentIndex == 1 {
+            print("Nature")
             natureVC.isHidden = false
-            print(indexPath.row)
-            
         }
-        
-        else if(indexPath.row == 2){
+        else if sender.selectedSegmentIndex == 2 {
+            print("FOood")
             foodVC.isHidden = false
-            print(indexPath.row)
-            
         }
-        else if(indexPath.row == 3){
-            print(indexPath.row)
+        else if sender.selectedSegmentIndex == 3 {
+            print("Culture")
             cultureVC.isHidden = false
         }
     }
     
-    
-    
-    
 }
+
+
+
+
 
 

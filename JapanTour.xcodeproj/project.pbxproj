@@ -27,7 +27,6 @@
 		4D934EF3263D44C100A7374C /* CultureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934EF2263D44C100A7374C /* CultureViewController.swift */; };
 		4D966FE42607248B0007F47F /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D966FE22607248B0007F47F /* PlacesTableViewCell.swift */; };
 		4D966FE52607248C0007F47F /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D966FE32607248B0007F47F /* PlacesTableViewCell.xib */; };
-		4DCDA909266FC2CA0087FA94 /* ScrollableSegmentedControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCDA908266FC2CA0087FA94 /* ScrollableSegmentedControlVC.swift */; };
 		4DE6159B265EA6FB007A523D /* RoundViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6159A265EA6FB007A523D /* RoundViewClass.swift */; };
 		5751CCB62618620D95C9C7B2 /* Pods_JapanTour_JapanTourUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B9AFF8DB3F812123BD1243 /* Pods_JapanTour_JapanTourUITests.framework */; };
 		6EDF60098CBE3FAB74CF0C50 /* Pods_JapanTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC414D9A804B6DC7DECF75A /* Pods_JapanTour.framework */; };
@@ -78,7 +77,6 @@
 		4D934EF2263D44C100A7374C /* CultureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureViewController.swift; sourceTree = "<group>"; };
 		4D966FE22607248B0007F47F /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		4D966FE32607248B0007F47F /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
-		4DCDA908266FC2CA0087FA94 /* ScrollableSegmentedControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableSegmentedControlVC.swift; sourceTree = "<group>"; };
 		4DE6159A265EA6FB007A523D /* RoundViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewClass.swift; sourceTree = "<group>"; };
 		4DFA4E868CD7E1B4E892BC19 /* Pods-JapanTourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanTourTests.release.xcconfig"; path = "Target Support Files/Pods-JapanTourTests/Pods-JapanTourTests.release.xcconfig"; sourceTree = "<group>"; };
 		68709A598EF0EE959017E71D /* Pods-JapanTour-JapanTourUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanTour-JapanTourUITests.debug.xcconfig"; path = "Target Support Files/Pods-JapanTour-JapanTourUITests/Pods-JapanTour-JapanTourUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 				4D4513F8260104620086DBD9 /* LaunchScreen.storyboard */,
 				4D4513FB260104620086DBD9 /* Info.plist */,
 				4D4513F32601045B0086DBD9 /* JapanTour.xcdatamodeld */,
-				4DCDA908266FC2CA0087FA94 /* ScrollableSegmentedControlVC.swift */,
 			);
 			path = JapanTour;
 			sourceTree = "<group>";
@@ -485,7 +482,6 @@
 				4D4513F52601045B0086DBD9 /* JapanTour.xcdatamodeld in Sources */,
 				4D934EF3263D44C100A7374C /* CultureViewController.swift in Sources */,
 				4D4513ED2601045B0086DBD9 /* SceneDelegate.swift in Sources */,
-				4DCDA909266FC2CA0087FA94 /* ScrollableSegmentedControlVC.swift in Sources */,
 				4D1312D12603B11D001E9358 /* CategoriesCollectionViewCell.swift in Sources */,
 				4D2A6B3E261F573E00095624 /* ProfileViewController.swift in Sources */,
 				4D966FE42607248B0007F47F /* PlacesTableViewCell.swift in Sources */,
